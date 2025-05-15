@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gemma-3-1b-it-inference-server-service
+  namespace: inference-server
+  labels:
+    examples.ai.gke.io/deployment-id: gemma-3-1b-it-inference-server-bycaK
+    examples.ai.gke.io/applied-by: gke-aiml-ui
+    examples.ai.gke.io/deployment-path: model-garden
+spec:
+  selector:
+    app: gemma-3-1b-it-inference-server-app
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 7080

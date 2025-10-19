@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gemma-3-1b-it-inference-server
-  namespace: inference-server
+  name: gemma-3-1b-it-inference-server-gitops
+  namespace: default
   labels:
     examples.ai.gke.io/deployment-id: gemma-3-1b-it-inference-server-bycaK
     examples.ai.gke.io/applied-by: gke-aiml-ui
